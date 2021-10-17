@@ -1,6 +1,5 @@
 package com.incentro.mylibrary.repository
 
-import android.content.Context
 import android.content.res.AssetManager
 import com.google.gson.GsonBuilder
 import com.incentro.mylibrary.model.Measure
@@ -13,8 +12,14 @@ class MeasureRepositoryImpl @Inject constructor(
     private val assetManager: AssetManager
 ) : MeasureRepository {
 
-    fun initDB() {
-        GsonBuilder().create().fromJson<List<List<Measure>>>(loadMeasuresJson(), ::Measure.javaClass)
+    init {
+        GsonBuilder().create()
+            .fromJson<List<List<Measure>>>(loadMeasuresJson(), ::Measure.javaClass)
+    }
+
+    override fun getAllFromJson(): List<List<Measure>> {
+        return GsonBuilder().create()
+            .fromJson<List<List<Measure>>>(loadMeasuresJson(), ::Measure.javaClass)
     }
 
     @Throws(IOException::class)

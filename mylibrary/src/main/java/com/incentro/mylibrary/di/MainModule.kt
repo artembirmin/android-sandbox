@@ -9,11 +9,13 @@ import dagger.Provides
 import javax.inject.Singleton
 
 @Module
-class MainModule(private val application: Application) {
-
-    @Provides
-    @Singleton
-    internal fun provideContext(): Context {
-        return application
-    }
+class MainModule(
+   // private val application: Application
+    ) {
+//
+//    @Provides
+//    @Singleton
+//    internal fun provideContext(): Context? {
+//        return null
+//    }
 }

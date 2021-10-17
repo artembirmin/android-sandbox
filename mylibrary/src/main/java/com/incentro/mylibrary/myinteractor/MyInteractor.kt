@@ -4,6 +4,6 @@ import com.incentro.mylibrary.model.Measure
 
 
 interface MyInteractor {
-    fun getJSON(): List<List<Measure>>
+    fun getAllFromJson(): List<List<Measure>>
     fun getAllFromDb(): List<Measure>
 }

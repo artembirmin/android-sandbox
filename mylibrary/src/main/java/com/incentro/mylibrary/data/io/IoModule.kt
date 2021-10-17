@@ -10,9 +10,9 @@ import javax.inject.Singleton
 @Module
 class IoModule {
 
-    @Provides
-    @Singleton
-    internal fun provideMeasureRepository(context: Context): MeasureRepository {
-        return MeasureRepositoryImpl(context.assets)
-    }
+//    @Provides
+//    @Singleton
+//    internal fun provideMeasureRepository(context: Context): MeasureRepository {
+//        return MeasureRepositoryImpl(context.assets)
+//    }
 }

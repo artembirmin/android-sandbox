@@ -8,7 +8,9 @@ plugins {
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
-
+    kapt {
+        generateStubs = true
+    }
     defaultConfig {
         minSdkVersion 23
         targetSdkVersion 30
