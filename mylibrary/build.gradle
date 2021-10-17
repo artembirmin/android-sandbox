@@ -66,8 +66,17 @@ afterEvaluate {
                 from components.release
 
                 // You can then customize attributes of the publication as shown below.
-                groupId = 'com.incetro.MyLibrary'
+                groupId = 'com.incetro.mylibrary'
                 artifactId = 'final'
+                version = '0.0.1'
+            }
+            // Creates a Maven publication called “debug”.
+            debug(MavenPublication) {
+                // Applies the component for the debug build variant.
+                from components.debug
+
+                groupId = 'com.incetro.mylibrary'
+                artifactId = 'final-debug'
                 version = '0.0.1'
             }
         }
