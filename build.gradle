@@ -17,7 +17,17 @@ buildscript {
         // in the individual module build.gradle files
     }
 }
-
+subprojects {
+    afterEvaluate {
+        if (project.plugins.hasPlugin("kotlin-kapt")) {
+            kapt {
+                javacOptions {
+                    option("-Xmaxerrs", 500)
+                }
+            }
+        }
+    }
+}
 
 allprojects {
     repositories {
