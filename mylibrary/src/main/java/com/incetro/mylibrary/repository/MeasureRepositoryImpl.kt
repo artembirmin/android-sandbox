@@ -10,8 +10,8 @@ import java.nio.charset.StandardCharsets
 class MeasureRepositoryImpl : MeasureRepository {
 
     init {
-        GsonBuilder().create()
-            .fromJson<List<List<Measure>>>(loadMeasuresJson(), ::Measure.javaClass)
+//        GsonBuilder().create()
+//            .fromJson<List<List<Measure>>>(loadMeasuresJson(), ::Measure.javaClass)
     }
 
     override fun getAllFromJson(): List<List<Measure>> {
