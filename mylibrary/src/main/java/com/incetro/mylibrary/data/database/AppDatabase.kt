@@ -20,6 +20,4 @@ abstract class AppDatabase : RoomDatabase() {
     }
 
     abstract fun measureDao(): MeasureDao
-
-
 }

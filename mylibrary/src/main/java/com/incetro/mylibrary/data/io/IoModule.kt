@@ -1,8 +1,9 @@
 package com.incetro.mylibrary.data.io
 
 import android.content.Context
-import com.incetro.mylibrary.repository.MeasureRepository
-import com.incetro.mylibrary.repository.MeasureRepositoryImpl
+import android.content.res.Resources
+import com.incetro.mylibrary.data.repository.MeasureRepository
+import com.incetro.mylibrary.data.repository.MeasureRepositoryImpl
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
@@ -12,7 +13,7 @@ class IoModule {
 
     @Provides
     @Singleton
-    internal fun provideMeasureRepository(): MeasureRepository {
-        return MeasureRepositoryImpl()
+    internal fun provideResources(context: Context): Resources {
+        return context.resources
     }
 }

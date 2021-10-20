@@ -2,13 +2,16 @@
   "length": [
     {
       "aliases": [
-        "метро11в11",
-        "мет111ры",
-        "ме1111111тра",
-        "метр11ах"
+        "метров",
+        "метры",
+        "метра",
+        "метрах"
       ],
-      "identifier": "meters",
-      "symbol": "м"
+      "id": "meters",
+      "symbol": "м",
+      "baseMeasureId": "meters",
+      "multiplier": 1.0
+
     },
     {
       "aliases": [
@@ -17,8 +20,10 @@
         "километра",
         "километрах"
       ],
-      "identifier": "kilometers",
-      "symbol": "км"
+      "id": "kilometers",
+      "symbol": "км",
+      "baseMeasureId": "meters",
+      "multiplier": 1000.0
     },
     {
       "aliases": [
@@ -27,8 +32,10 @@
         "сантиметра",
         "сантиметрах"
       ],
-      "identifier": "centimeters",
-      "symbol": "см"
+      "id": "centimeters",
+      "symbol": "см",
+      "baseMeasureId": "meters",
+      "multiplier": 0.001
     },
     {
       "aliases": [
@@ -37,8 +44,10 @@
         "миллметра",
         "миллметрах"
       ],
-      "identifier": "millimeters",
-      "symbol": "мм"
+      "id": "millimeters",
+      "symbol": "мм",
+      "baseMeasureId": "meters",
+      "multiplier": 1e-4
     }
   ],
   "area": [
@@ -50,8 +59,10 @@
         "квадратных километрах",
         "квадратный километр"
       ],
-      "identifier": "squareKilometers",
-      "symbol": "км²"
+      "id": "squareKilometers",
+      "symbol": "км²",
+      "baseMeasureId": "squareMeters",
+      "multiplier": 1e+6
     },
     {
       "aliases": [
@@ -59,15 +70,12 @@
         "квадратные метры",
         "квадратных метра",
         "квадратных метрах",
-        "метры в квадрате",
-        "метрах в квадрате",
-        "метра в квадрате",
-        "метров в квадрате",
-        "квадратный метр",
-        "метр в квадрате"
+        "квадратный метр"
       ],
-      "identifier": "squareMeters",
-      "symbol": "м²"
+      "id": "squareMeters",
+      "symbol": "м²",
+      "baseMeasureId": "squareMeters",
+      "multiplier": 1e+0
     },
     {
       "aliases": [
@@ -75,11 +83,12 @@
         "квадратные сантиметры",
         "квадратных сантиметра",
         "квадратных сантиметрах",
-        "квадратный сантиметр",
-        "см в квадрате"
+        "квадратный сантиметр"
       ],
-      "identifier": "squareCentimeters",
-      "symbol": "см²"
+      "id": "squareCentimeters",
+      "symbol": "см²",
+      "baseMeasureId": "squareMeters",
+      "multiplier": 1e-4
     },
     {
       "aliases": [
@@ -87,11 +96,12 @@
         "квадратные миллиметры",
         "квадратных миллиметры",
         "квадратных миллиметрах",
-        "квадратный миллиметр",
-        "мм в квадрате"
+        "квадратный миллиметр"
       ],
+      "id": "squareMillimeters",
       "symbol": "мм²",
-      "identifier": "squareMillimeters"
+      "baseMeasureId": "squareMeters",
+      "multiplier": 1e-6
     },
     {
       "aliases": [
@@ -99,104 +109,12 @@
         "квадратные микрометры",
         "квадратных микрометры",
         "квадратных микрометрах",
-        "квадратный микрометр",
-        "мм в квадрате"
+        "квадратный микрометр"
       ],
-      "identifier": "squareMicrometers",
-      "symbol": "мкм²"
-    },
-    {
-      "aliases": [
-        "квадратных дюймов",
-        "квадратные дюймы",
-        "квадратных дюйма",
-        "квадратных дюймах",
-        "кв дюйм",
-        "кв дюймы",
-        "кв дюйма",
-        "кв дюймов",
-        "кв дюймах",
-        "квадратный дюйм"
-      ],
-      "identifier": "squareInches",
-      "symbol": "in²"
-    },
-    {
-      "aliases": [
-        "квадратных футов",
-        "квадратные футе",
-        "квадратные футы",
-        "квадратных фута",
-        "квадратных футах",
-        "футы в квадрате",
-        "фута в квадрате",
-        "футов в квадрате",
-        "футах в квадрате",
-        "квадратный фут",
-        "фут в квадрате"
-      ],
-      "identifier": "squareFeet",
-      "symbol": "ft²"
-    },
-    {
-      "aliases": [
-        "квадратных ярдов",
-        "квадратные ярды",
-        "квадратных ярда",
-        "квадратных ярдах",
-        "ярды в квадрате",
-        "ярда в квадрате",
-        "ярдов в квадрате",
-        "ярдах в квадрате",
-        "квадратный ярд",
-        "ярд в квадрате"
-      ],
-      "identifier": "squareYards",
-      "symbol": "yd²"
-    },
-    {
-      "aliases": [
-        "квадратная миля",
-        "квадратных милй",
-        "квадратные мили",
-        "квадратных миль",
-        "квадратных милях"
-      ],
-      "identifier": "squareMiles",
-      "symbol": "mi²"
-    },
-    {
-      "aliases": [
-        "акров",
-        "акры",
-        "акра",
-        "акрах",
-        "акр"
-      ],
-      "identifier": "acres",
-      "symbol": "ac"
-    },
-    {
-      "aliases": [
-        "гектаров",
-        "гектары",
-        "гектара",
-        "гектарах",
-        "гектар"
-      ],
-      "identifier": "hectares",
-      "symbol": "га"
-    },
-    {
-      "aliases": [
-        "сотка",
-        "сотки",
-        "ара",
-        "аров",
-        "ары"
-      ],
-      "identifier": "ares",
-      "symbol": "ар"
+      "id": "squareMicrometers",
+      "symbol": "мкм²",
+      "baseMeasureId": "squareMeters",
+      "multiplier": 1e-10
     }
   ]
 }

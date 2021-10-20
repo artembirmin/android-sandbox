@@ -1,23 +1,20 @@
-package com.incetro.mylibrary.data.database;
+package com.incetro.mylibrary.data.database
 
-import androidx.room.Dao;
-import androidx.room.Insert;
-import androidx.room.Query;
-
-import com.incetro.mylibrary.model.Measure;
-
-import java.util.List;
+import androidx.room.Dao
+import androidx.room.Insert
+import androidx.room.OnConflictStrategy
+import androidx.room.Query
+import com.incetro.mylibrary.model.Measure
 
 @Dao
-public interface MeasureDao {
- 
-   @Query("SELECT * FROM measure")
-   List<Measure> getAll();
- 
-   @Query("SELECT * FROM measure WHERE id = :id")
-   Measure getById(long id);
+interface MeasureDao {
 
-   @Insert
-   void insert(Measure employee);
- 
+    @Query("SELECT * FROM measure")
+    suspend fun getAll(): List<Measure>
+
+    @Insert
+    suspend fun insert(employee: Measure)
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertAll(users: List<Measure>)
 }
