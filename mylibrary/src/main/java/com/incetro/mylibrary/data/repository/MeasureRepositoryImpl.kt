@@ -10,11 +10,10 @@ import com.incetro.mylibrary.model.MeasureLists
 import kotlinx.coroutines.runBlocking
 import java.io.IOException
 
-class MeasureRepositoryImpl(
+internal class MeasureRepositoryImpl(
     private val resources: Resources,
     private val measureDao: MeasureDao
-) :
-    MeasureRepository {
+) : MeasureRepository {
 
     override fun getAllFromJson(): List<Measure> {
         val listOfListsOfMeasures = object : TypeToken<MeasureLists>() {}.type

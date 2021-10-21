@@ -8,9 +8,6 @@ plugins {
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
-    kapt {
-        generateStubs = true
-    }
     defaultConfig {
         minSdkVersion 23
         targetSdkVersion 30
@@ -49,7 +46,6 @@ dependencies {
     implementation "androidx.room:room-runtime:$roomVersion"
     kapt "androidx.room:room-compiler:$roomVersion"
     implementation "androidx.room:room-ktx:$roomVersion"
-    //implementation "androidx.room:room-coroutines:$roomVersion"
 
     //gson
     implementation 'com.google.code.gson:gson:2.8.8'
@@ -74,7 +70,7 @@ afterEvaluate {
             // Creates a Maven publication called "release".
             release(MavenPublication) {
                 // Applies the component for the release build variant.
-                from components.release
+              
 
                 // You can then customize attributes of the publication as shown below.
                 groupId = 'com.incetro.mylibrary'
