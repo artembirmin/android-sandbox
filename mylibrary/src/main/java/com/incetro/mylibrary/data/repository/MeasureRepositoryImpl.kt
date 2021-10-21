@@ -6,7 +6,7 @@ import com.google.gson.reflect.TypeToken
 import com.incetro.mylibrary.R
 import com.incetro.mylibrary.data.database.MeasureDao
 import com.incetro.mylibrary.model.Measure
-import com.incetro.mylibrary.model.MeasureListsJson
+import com.incetro.mylibrary.model.MeasureLists
 import kotlinx.coroutines.runBlocking
 import java.io.IOException
 
@@ -17,9 +17,9 @@ class MeasureRepositoryImpl(
     MeasureRepository {
 
     override fun getAllFromJson(): List<Measure> {
-        val listOfListsOfMeasures = object : TypeToken<MeasureListsJson>() {}.type
+        val listOfListsOfMeasures = object : TypeToken<MeasureLists>() {}.type
         return (GsonBuilder().create()
-            .fromJson(loadMeasuresJson(), listOfListsOfMeasures) as MeasureListsJson)
+            .fromJson(loadMeasuresJson(), listOfListsOfMeasures) as MeasureLists)
             .let { listOf(it.length, it.area) }.flatten()
     }
 
